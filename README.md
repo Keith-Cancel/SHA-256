@@ -2,7 +2,7 @@
  A simple C impletation of SHA-256 and SHA-256 HMAC.
 
 ## Usage Example (C)
-A simple example that outputs some common test vectors.
+A simple example that outputs the results of 6 test vectors.
 ```c
 
 #include <stdio.h>
