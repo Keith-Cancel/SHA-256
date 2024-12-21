@@ -156,7 +156,10 @@ void sha256(const uint8_t* data, size_t data_len, uint8_t* hash, size_t hash_len
     for(int i = 0; i < 8 && is_litte_endian(); i++) {
         init[i] = byte_swap32(init[i]);
     }
-    memcpy(hash, init, 32);
+    if(hash_len > 32) {
+        hash_len = 32;
+    }
+    memcpy(hash, init, hash_len);
 }
 
 #define IPAD   0x36363636
